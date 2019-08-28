@@ -6,10 +6,10 @@ USER root
 
 # Install additional libraries required by Python packages which are in
 # the minimal base image. Also install 'rsync' so the 'oc rsync' command
-# can be used to copy files into the running container.
+# can be used to copy files into the running container.libav-tools
 
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends libav-tools rsync && \
+    apt-get install -y --no-install-recommends ffmpeg rsync && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
